@@ -1,1 +1,106 @@
 @charset "UTF-8";
+
+/*importação de fonte*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*css reset(compatibilizar com todos navegadores)*/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+}
+
+/* Layout*/
+body {
+    font-family:  "Montserrat", ital;
+    font-size: 1em;/* 1em=100%(tamanho padrão)*/
+}
+
+.container {
+    margin: 0 auto;/* 0 auto centraliza o bloco*/
+}
+
+/*smathfone Portrait>>>>>>>>>>>>>>>>>>*/
+/*cabeçalho*/
+header {
+    height: 80px;
+    background-color: darkblue;
+}
+
+ #logo img {
+    width: 80px;
+    height: 80px;
+    margin: 0px 0px 0px 7px;
+ }
+
+ /*Smarthfone Landscape>>>>>>>>>>>>>>>>>>>>>*/
+ @media (min-width:576px) {
+
+    #logo img {
+      margin: 0px 0px 2px 13px;
+    }
+
+    .container {
+        max-width: 540px;
+    }
+ }
+
+ /*tablet portrati>>>>>>>>>*/
+ @media (min-width: 768px) {
+
+    .container{
+        max-width: 720px;
+        
+    }
+    
+    header {
+     height: 110px;
+
+    }
+    #logo img {
+        width: 100px;
+        height: 100px;
+    }
+ }
+
+/*tablet landscape>>>>>>>>>>*/
+ @media (min-width: 992px) {
+
+    .container {
+        max-width: 960px;
+       
+    }
+ }
+
+ /*PCs / Notebooks>>>>>>>>>>>>>>>>>*/
+ @media (min-width: 1200px) {
+    .container {
+        max-width: 1140;
+        background-color: rgb(51, 10, 17);
+
+    }
+    header {
+        height: 150px;
+    }
+    #logo img {
+        width: 128px;
+        height: 128px;
+    }
+
+ }
+
+ @media (min-width: 1400px) {
+    .container {
+        max-width: 1360;
+        background-color: rgb(36, 18, 201);
+
+    }
+    header {
+        height: 200px;
+    }
+    #logo img {
+        width: 225px;
+        height: 225px;
+    }
+ }
