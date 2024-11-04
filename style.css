@@ -83,7 +83,7 @@ header {
  /*100vh equivale a 100% altura da tela*/
  nav ul {
     height: 100vh;
-    background-color: rgba(155, 166, 250,1);
+    background-color: rgba(155, 166, 250, 0.5);
     list-style: none;/*remove os bullets*/
     width: 65%;
     position: fixed;
