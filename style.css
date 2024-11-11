@@ -20,14 +20,18 @@
 
 }
 
+
+
 /* Layout*/
 body {
-    font-family:  "Montserrat", ital;
-    font-size: 1em;/* 1em=100%(tamanho padrão)*/
+    font-family: "Montserrat", ital;
+    font-size: 1em;
+    /* 1em=100%(tamanho padrão)*/
 }
 
 .container {
-    margin: 0 auto;/* 0 auto centraliza o bloco*/
+    margin: 0 auto;
+    /* 0 auto centraliza o bloco*/
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -47,44 +51,48 @@ body {
     margin-top: 30px;
 }
 
-/*smathfone Portrait>>>>>>>>>>>>>>>>>>*/
-/*cabeçalho*/
+/* fim do layout>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+/*smathfone Portrait>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+/*******************cabeçalho*************************/
 header {
     height: 80px;
     background-color: darkblue;
 }
 
- #logo img {
+#logo img {
     width: 80px;
     height: 80px;
     margin: 0px 0px 0px 7px;
- }
+}
 
 
- #check {
+#check {
     display: none;
 
- }
+}
 
-  /*efeito de deslizar o menu*/
-  /*se o check estiver "ticado",criar um estilo para ul*/
+/*efeito de deslizar o menu*/
+/*se o check estiver "ticado",criar um estilo para ul*/
 #check:checked~ul {
     right: 0px;
 }
 
- label {
+label {
     font-size: 3em;
     position: fixed;
     top: 25px;
     right: 15px;
-    color: rgba(0,0,0, 0.5)/*0.5 =50% transparencia (0 a 1(100%) )*/
- }
+    color: rgba(0, 0, 0, 0.5)
+        /*0.5 =50% transparencia (0 a 1(100%) )*/
+}
 
- /*100vh equivale a 100% altura da tela*/
- nav ul {
+/*100vh equivale a 100% altura da tela*/
+nav ul {
     height: 100vh;
     background-color: rgba(155, 166, 250, 0.5);
-    list-style: none;/*remove os bullets*/
+    list-style: none;
+    /*remove os bullets*/
     width: 65%;
     position: fixed;
     top: 80px;
@@ -93,173 +101,206 @@ header {
     z-index: 1;
 }
 
- nav ul li {
-    padding: 15px 20px 15px 20px;/**/
+nav ul li {
+    padding: 15px 20px 15px 20px;
+    /**/
     border-bottom: 1px solid var(--preto);
     text-align: right;
- }
+}
 
- nav ul li a {
+nav ul li a {
     color: var(--preto);
-    text-decoration: none;/*remove sublinhado*/
- }
+    text-decoration: none;
+    /*remove sublinhado*/
+}
 
- /*video background*/
- main {
-   height: 50vh;
-   position: relative;
-   
+/********************video background*****************/
+main {
+    height: 50vh;
+    position: relative;
 
- }
 
- main video {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
+}
 
- }
+main video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+}
+
 main h1 {
-  font-size: 2.5em;
+    font-size: 2.5em;
 }
 
 main h2 {
     font-size: 1.2em;
-     
+
 }
 
 .destaque {
 
-position: absolute;
-bottom:0;
-/*background é diferente de background*/
-background: rgba(0,0,0, 0.5);
-width: 100%;
+    position: absolute;
+    bottom: 0;
+    /*background é diferente de background*/
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
 }
 
- main h1 , h2{
+main h1,
+h2 {
     color: var(--preto);
-    text-shadow: #000 0.05em 0.05em 0.05em ;   
-     /*sombreamento do texto*/
-     /*sombra*/
-     margin:5px 0px 0px 20px;
- }
+    text-shadow: #000 0.05em 0.05em 0.05em;
+    /*sombreamento do texto*/
+    /*sombra*/
+    margin: 5px 0px 0px 20px;
+}
 
- /*Smarthfone Landscape>>>>>>>>>>>>>>>>>>>>>*/
- @media (min-width:576px) {
-  
-  
+/*fim do smarthfone portrait>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+/*Smarthfone Landscape>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+@media (min-width:576px) {
+
+
     #logo img {
-      margin: 0px 0px 2px 13px;
+        margin: 0px 0px 2px 13px;
     }
 
     .container {
         max-width: 750px;
     }
-    nav ul{
+
+    nav ul {
         top: 80px;
 
     }
- }
+}
 
- /*tablet portrati>>>>>>>>>*/
- @media (min-width: 768px) {
+/*fim do smarthfone landscape>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 
-    .container{
+/*tablet portrati>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+@media (min-width: 768px) {
+
+    .container {
         max-width: 740px;
-        
-    }
-    
-    header {
-     height: 110px;
-     
 
     }
+
+    header {
+        height: 110px;
+
+
+    }
+
     #logo img {
         width: 100px;
         height: 100px;
     }
 
     nav ul {
-          top: 110px;
-          width: 55%;
+        top: 110px;
+        width: 55%;
         right: -55%;
     }
 
+    /**********banner**********/
     main h1 {
         font-size: 4em;
     }
 
-    main h2{
+}
 
-    }
-
- }
+/*fim do tablet portrait>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 
 /*tablet landscape>>>>>>>>>>*/
- @media (min-width: 992px) {
+@media (min-width: 992px) {
 
     .container {
         max-width: 990px;
-       
-    }
- }
 
- /*PCs / Notebooks>>>>>>>>>>>>>>>>>*/
- @media (min-width: 1200px) {
+    }
+}
+
+/*****fimdo tablet landscape>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+/*PCs / Notebooks>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+@media (min-width: 1200px) {
     .container {
         max-width: 1140px;
     }
+
     header {
         height: 150px;
     }
+
     #logo img {
         width: 108px;
         height: 108px;
     }
-    /*transformação do menu*/
-   label {
-    display: none;
-   
-   }
-   main video {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-   nav ul {
-    width: 100%;
-    height: auto;
-    position: static;
-    background-color: transparent;/*remove a cor do site /deixa trensparente*/
-   }
-   nav ul li {
-    float: left;
-    border: 0;
-   }
-   nav ul li a {
-    color: var(--dourado);
-   }
-   nav ul li a:hover {
-      color: var(--vermelho);
-   }
- }
 
- @media (min-width: 1400px) {
-    .container {
-        max-width: 1460px;
-       
+    /*transformação do menu*/
+    label {
+        display: none;
+
     }
-    header {
-        height: 190px;
-       
-    }
-    #logo img {
-        width: 210px;
-        height: 200px;
-    }
+
     main video {
         height: 100%;
         width: 100%;
         object-fit: cover;
     }
- }
+
+    nav ul {
+        width: 100%;
+        height: auto;
+        position: static;
+        background-color: transparent;
+        /*remove a cor do site /deixa trensparente*/
+    }
+
+    nav ul li {
+        float: left;
+        border: 0;
+    }
+
+    nav ul li a {
+        color: var(--dourado);
+    }
+
+    nav ul li a:hover {
+        color: var(--vermelho);
+    }
+
+    main h1 {
+        font-size: 5em;
+    }
+}
+
+/*fim do pc /notebook<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+
+
+/*telas fullhd/4k/smarttv>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1460px;
+
+    }
+
+    header {
+        height: 190px;
+
+    }
+
+    #logo img {
+        width: 210px;
+        height: 200px;
+    }
+
+    main video {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+/*fim do fullhd/4k/smarttv<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
