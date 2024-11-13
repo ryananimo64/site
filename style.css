@@ -162,7 +162,7 @@ h2 {
     background-size: cover;
     background-position: center;
     /*espaçamento interno para não encostar na borda da tela do dispositivo*/
-    padding: 50px 200px;
+    padding: 150px 200px;
 }
 /*Atenção!! organizando o container após o destaque o estilo é aplicado apenas ao container da seção de destaque*/
 /* FIm | Smartphone Portrait >>>>>>>>>>>>>>>>>>>>>>>*/
