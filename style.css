@@ -5,11 +5,11 @@
 
 /*variaveis*/
 :root {
-    --preto: #fffdfd;
+    --preto: #fdfbfb;
     --dourado: #9ba6fa;
     --vermelho: #ff0000;
     --marrom: #57bcc3;
-    --branco: #000;
+    --branco: #030303;
 }
 
 /*css reset(compatibilizar com todos navegadores)*/
@@ -35,6 +35,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 }
 
 .botao {
@@ -57,7 +58,7 @@ body {
 /*******************cabeçalho*************************/
 header {
     height: 80px;
-    background-color: darkblue;
+    background-color: rgb(5, 5, 109);
 }
 
 #logo img {
@@ -155,6 +156,60 @@ h2 {
     /*sombra*/
     margin: 5px 0px 0px 20px;
 }
+/*DESTAQUE>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.*/
+#destaque {
+    background: url(img/background3.png);
+    background-size: cover;
+    background-position: center;
+    /*espaçamento interno para não encostar na borda da tela do dispositivo*/
+    padding: 50px 200px;
+}
+/*Atenção!! organizando o container após o destaque o estilo é aplicado apenas ao container da seção de destaque*/
+/* FIm | Smartphone Portrait >>>>>>>>>>>>>>>>>>>>>>>*/
+#destaque .container{
+    flex-direction: row;
+    align-items: center;
+}
+
+/*para esconder a imagem usamos display: none no
+containher da image| para exibir novamente em telas
+maiores, usamos display:block*/
+#imagemDestaque{
+    /*display: none;*/
+} 
+
+#textodedestaque{
+    color: var(--preto);
+}
+
+#textoDestaque h2{
+    margin-bottom: 15px;
+}
+/*ATENÇÃO!!! detalhedo sinal ">" ref.ao elemento imediato*/
+#textoDestaque>p{
+   margin-bottom: 15px;
+}
+
+.topicos{
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.topicos img{
+    margin-right: 10px;
+}
+
+.topicos p {
+    font-weight: 600;
+}
+
+#imgdestaque img {
+    width: 250px;
+    height: 250px;
+    /*arrendondar uma imagem quadrada*/
+    border-radius: 50%;
+}
 
 /*fim do smarthfone portrait>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 
@@ -182,7 +237,7 @@ h2 {
 @media (min-width: 768px) {
 
     .container {
-        max-width: 740px;
+        max-width: 850px;
 
     }
 
@@ -203,6 +258,10 @@ h2 {
         right: -55%;
     }
 
+    main {
+        height: 80vh;
+    }
+
     /**********banner**********/
     main h1 {
         font-size: 4em;
@@ -216,7 +275,7 @@ h2 {
 @media (min-width: 992px) {
 
     .container {
-        max-width: 990px;
+        max-width: 1100px;
 
     }
 }
@@ -282,7 +341,7 @@ h2 {
 /*telas fullhd/4k/smarttv>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 @media (min-width: 1400px) {
     .container {
-        max-width: 1460px;
+        max-width: 1960px;
 
     }
 
