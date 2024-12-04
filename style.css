@@ -1,7 +1,10 @@
 @charset "UTF-8";
 
 /*importação de fonte*/
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+
+
 
 /*variaveis*/
 :root {
@@ -23,6 +26,10 @@
 
 
 /* Layout*/
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Montserrat", ital;
     font-size: 1em;
@@ -33,7 +40,7 @@ body {
     margin: 0 auto;
     /* 0 auto centraliza o bloco*/
     display: flex;
-    justify-content: space-between;
+   justify-content: space-between;
     align-items: center;
 
 }
@@ -50,6 +57,13 @@ body {
     border-radius: 25px;
     align-self: center;
     margin-top: 30px;
+}
+
+#topo{
+    position: fixed;
+    right: 10px;
+    bottom: 50px;
+    scroll-behavior: smooth;
 }
 
 /* fim do layout>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
@@ -162,21 +176,21 @@ h2 {
     background-size: cover;
     background-position: center;
     /*espaçamento interno para não encostar na borda da tela do dispositivo*/
-    padding: 150px 200px;
+    padding: 100px ;
 }
 /*Atenção!! organizando o container após o destaque o estilo é aplicado apenas ao container da seção de destaque*/
 /* FIm | Smartphone Portrait >>>>>>>>>>>>>>>>>>>>>>>*/
 #destaque .container{
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
 }
 
 /*para esconder a imagem usamos display: none no
 containher da image| para exibir novamente em telas
 maiores, usamos display:block*/
-#imagemDestaque{
-    /*display: none;*/
-} 
+/*#imagemDestaque{
+    /*display: none;
+} */
 
 #textodedestaque{
     color: var(--preto);
@@ -211,6 +225,85 @@ maiores, usamos display:block*/
     border-radius: 50%;
 }
 
+/*>>>>>>>>>>>>>>>>>Sobre>>>>>>>>>>*/
+#sobre .container {
+    flex-direction: column;
+}
+
+#sobre {
+    padding: 50px 15px;
+    background-color: var(--branco);
+}
+
+#sobre h2{
+    color: var(--preto);
+}
+
+#sobre h2 {
+    margin-bottom: 20px;
+}
+
+#sobre p {
+    color: var(--preto);
+}
+
+#video iframe {
+    width: 340px;
+    height: 191px;
+    margin-top: 20px;
+}
+
+/********faixa de destaque***********/
+
+#faixadedestaque{
+    background: url(img/background3.png);
+    background-size: cover;
+    background-position: center;
+    padding: 60px 40px;
+   
+}
+
+#faixadedestaque .container{
+    flex-direction: row-reverse;
+    align-items: center;
+   
+   
+}
+
+#imagemfaixa img{
+    width:  60px;
+    height: 70px;
+   
+}
+
+#textodafaixa  h2{
+
+    color: var(--preto);
+    margin-bottom: 15px;
+}
+
+#textodafaixa p{
+    
+    color: var(--preto);
+    margin-bottom: 50px;
+}
+
+/*________________________Rodapé__________________*/
+#rodape {
+    flex-direction: column;
+    background-color: var(--branco);
+}
+
+#textorodape{
+    color: var(--preto);
+}
+
+
+#redes img{
+    width: 60px;
+    height: 60px;
+}
+
 /*fim do smarthfone portrait>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 
 /*Smarthfone Landscape>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
@@ -228,6 +321,31 @@ maiores, usamos display:block*/
     nav ul {
         top: 80px;
 
+    }
+    
+    /****** Sobre ******/
+    #video iframe {
+        width: 560px;
+        height: 315px;
+    }
+    /****** destaque ******/
+    #destaque .container {
+        flex-direction: row;
+    }
+
+    #imagemDestaque {
+        margin-right: 50px;
+    }
+
+    #imagemDestaque img {
+        width: 256px;
+        height: 256px;
+    }
+
+    /****** Sobre ******/
+    #video iframe {
+        width: 560px;
+        height: 315px;
     }
 }
 
@@ -267,6 +385,11 @@ maiores, usamos display:block*/
         font-size: 4em;
     }
 
+    /****** Destaque ******/
+    #imagemDestaque img {
+        width: 440px;
+        height: 440px;
+    }
 }
 
 /*fim do tablet portrait>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
@@ -333,6 +456,34 @@ maiores, usamos display:block*/
     main h1 {
         font-size: 5em;
     }
+    
+    /******* Sobre ******/
+    #sobre .container {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #video iframe {
+        margin: 0;
+    }
+
+    /***** Faixa de Destaque *****/
+    #faixaDestaque {
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+    }
+
+    #faixaDestaque .container{
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    #imagemDestaque img{
+        width: 360px;
+        height: 360px;
+    }
+    
 }
 
 /*fim do pc /notebook<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
@@ -361,5 +512,6 @@ maiores, usamos display:block*/
         object-fit: cover;
     }
 }
+
 
 /*fim do fullhd/4k/smarttv<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
