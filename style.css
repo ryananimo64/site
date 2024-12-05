@@ -154,7 +154,7 @@ main h2 {
 }
 
 .destaque {
-
+   
     position: absolute;
     bottom: 0;
     /*background é diferente de background*/
@@ -177,12 +177,14 @@ h2 {
     background-position: center;
     /*espaçamento interno para não encostar na borda da tela do dispositivo*/
     padding: 100px ;
+
 }
 /*Atenção!! organizando o container após o destaque o estilo é aplicado apenas ao container da seção de destaque*/
 /* FIm | Smartphone Portrait >>>>>>>>>>>>>>>>>>>>>>>*/
 #destaque .container{
     flex-direction: column;
     align-items: center;
+    display: flex;
 }
 
 /*para esconder a imagem usamos display: none no
@@ -200,8 +202,9 @@ maiores, usamos display:block*/
     margin-bottom: 15px;
 }
 /*ATENÇÃO!!! detalhedo sinal ">" ref.ao elemento imediato*/
-#textoDestaque>p{
+#textoDestaque p{
    margin-bottom: 15px;
+
 }
 
 .topicos{
@@ -219,15 +222,17 @@ maiores, usamos display:block*/
 }
 
 #imgdestaque img {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     /*arrendondar uma imagem quadrada*/
     border-radius: 50%;
+    margin-left: 300px;
 }
 
 /*>>>>>>>>>>>>>>>>>Sobre>>>>>>>>>>*/
 #sobre .container {
     flex-direction: column;
+    align-items: center;
 }
 
 #sobre {
@@ -241,16 +246,19 @@ maiores, usamos display:block*/
 
 #sobre h2 {
     margin-bottom: 20px;
+    margin-left: 60px;
 }
 
 #sobre p {
     color: var(--preto);
+    margin-left: 60px;
 }
 
 #video iframe {
-    width: 340px;
-    height: 191px;
+    width: 300px;
+    height: 190px;
     margin-top: 20px;
+    margin-right: 100px;
 }
 
 /********faixa de destaque***********/
@@ -463,6 +471,8 @@ maiores, usamos display:block*/
         align-items: center;
     }
 
+   
+
     #video iframe {
         margin: 0;
     }
@@ -482,6 +492,7 @@ maiores, usamos display:block*/
     #imagemDestaque img{
         width: 360px;
         height: 360px;
+        margin-left: 300px;
     }
     
 }
@@ -492,7 +503,7 @@ maiores, usamos display:block*/
 /*telas fullhd/4k/smarttv>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 @media (min-width: 1400px) {
     .container {
-        max-width: 1960px;
+        max-width: 3041px;
 
     }
 
