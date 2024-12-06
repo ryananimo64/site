@@ -291,7 +291,7 @@ maiores, usamos display:block*/
     width: 300px;
     height: 190px;
     margin-top: 20px;
-    margin-right: 55px;
+    margin-right: 15px;
 }
 
 
@@ -366,20 +366,24 @@ maiores, usamos display:block*/
 
 
 /*________________________Rodapé__________________*/
-#rodape {
-    flex-direction: column;
+ #rodape{
     background-color: var(--branco);
-}
+    flex-direction: column;
+ }
+   
 
 #textorodape{
+    flex-direction: column;
+    background-color: var(--branco);
+
     margin-left: 15px;
     color: var(--preto);
 }
 
 
 #redes img{
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     margin-right: 15px;
 }
 
