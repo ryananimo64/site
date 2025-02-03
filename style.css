@@ -212,7 +212,7 @@ h2 {
     background-size: cover;
     background-position: center;
     /*espaçamento interno para não encostar na borda da tela do dispositivo*/
-    padding: 100px ;
+    padding: 40px ;
 
 }
 /*Atenção!! organizando o container após o destaque o estilo é aplicado apenas ao container da seção de destaque*/
@@ -303,7 +303,7 @@ maiores, usamos display:block*/
     background: url(img/background3.png);
     background-size: cover;
     background-position: center;
-    padding: 50px 15px;
+    padding: 50px;
    
 }
 
