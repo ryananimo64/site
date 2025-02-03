@@ -13,6 +13,7 @@
     --vermelho: #ff0000;
     --marrom: #57bcc3;
     --branco: #030303;
+    --cinza:  rgb(165, 164, 164);
 }
 
 /*css reset(compatibilizar com todos navegadores)*/
@@ -61,6 +62,7 @@ body {
 
 /* Layout para 3 cartões */
 .card {
+    margin: 15px;
     width: 338px;
     height: 520px;
     margin-top: 25px;
@@ -272,7 +274,7 @@ maiores, usamos display:block*/
 
 #sobre {
     padding: 50px 15px;
-    background-color: var(--branco);
+    background-color: var(--cinza);
 }
 
 
@@ -334,12 +336,11 @@ maiores, usamos display:block*/
 
 /****** Seção de conteúdo (cards) ******/
 #conteudo {
-    background-color: var(--branco);
-    padding: 50px 0px;
+    background-color: var(--cinza);
+    padding: 50px 0px ;
 }
 
 #conteudo .container {
-    
     flex-direction: column;
     align-items: center;
 }
@@ -352,12 +353,14 @@ maiores, usamos display:block*/
 #todos {
     color: var(--preto);
     margin-top: 50px;
+    margin: 15px;
     text-decoration: none;
     font-size: 1.25em;
     font-weight: 700;
 }
 
 .containerCards {
+    margin: 15px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -367,17 +370,17 @@ maiores, usamos display:block*/
 
 /*________________________Rodapé__________________*/
  #rodape{
-    background-color: var(--branco);
+    background-color: var(--cinza);
     flex-direction: column;
  }
    
 
 #textorodape{
     flex-direction: column;
-    background-color: var(--branco);
+    background-color: var(--cinza);
 
     margin-left: 15px;
-    color: var(--preto);
+    color: var(--branco);
 }
 
 
@@ -569,6 +572,9 @@ maiores, usamos display:block*/
         height: 360px;
         margin-left: 300px;
     }
+
+
+
     
 }
 
